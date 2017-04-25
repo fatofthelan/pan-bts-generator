@@ -1,0 +1,2 @@
+serial,type,ip-address,default-gateway,netmask,ipv6-address,ipv6-default-gateway,hostname,panorama-server,panorama-server-2,tplname,dgname,dns-primary,dns-secondary,op-command-modes,dhcp-send-hostname,dhcp-send-client-id,dhcp-accept-server-hostname,dhcp-accept-server-domain
+12876543210,static,10.88.4.24,10.88.4.254,255.255.255.0,2001:470:f::88:4:24/112,2001:470:f::88:4:ffff,perim-fw-ext-01,,,RETAIL_STORE_FWS,PERIM_FWS,10.88.4.254,2001:470:f::88:4:ffff,"jumbo-frame,multi-vsys",no,no,no,no
