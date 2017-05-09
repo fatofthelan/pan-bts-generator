@@ -52,13 +52,13 @@ TPL_DG_NAME_REGEX = '^[a-zA-Z0-9][-_.a-zA-Z0-9]{1,30}$'
 OP_CMDS_REGEX = '^(multi-vsys|jumbo-frame|mgmt-interface-swap)(\s*,?\s*(?!\1)' \
                 '(multi-vsys|jumbo-frame|mgmt-interface-swap))*$'
 YES_NO_REGEX = '^(yes|no)$'
-BTS_FIELD_REGEXS = { 
+BTS_FIELD_REGEXS = {
         'type': IP_ADDR_TYPE_REGEX,
         'ip-address': IPV4_ADDR_REGEX,
         'default-gateway': IPV4_ADDR_REGEX,
         'netmask': IPV4_ADDR_REGEX,
         'ipv6-address': IPV6_ADDR_REGEX,
-        'ipv6-default-gateway': IPV6_ADDR_REGEX, 
+        'ipv6-default-gateway': IPV6_ADDR_REGEX,
         'hostname': HOSTNAME_REGEX,
         'panorama-server': IP_ADDR_REGEX,
         'panorama-server-2': IP_ADDR_REGEX,
@@ -82,7 +82,7 @@ BTS_FIELDS = [
         'panorama-server', 'panorama-server-2', 'tplname', 'dgname',
         'dns-primary', 'dns-secondary', 'op-command-modes',
         'dhcp-send-hostname', 'dhcp-send-client-id',
-        'dhcp-accept-server-hostname', 'dhcp-accept-server-domain' 
+        'dhcp-accept-server-hostname', 'dhcp-accept-server-domain'
         ]
 LIC_API_URL = 'https://api.paloaltonetworks.com/api/license/activate'
 LIC_FILE_SUFFIXES = {
@@ -158,7 +158,7 @@ def create_licenses(serial, licenses):
     build_dir = get_build_dir()
 
     for license in licenses:
-        if license['typeField'] == 'SUB':
+        if license['typeField'] in ('SUB', 'RENSUB'):
             feature = LIC_FILE_SUFFIXES[license['featureField']]
             key = license['keyField']
 
@@ -217,7 +217,7 @@ def main():
             reader = csv.reader(file)
 
             for line_num, row in enumerate(reader):
-                if line_num > 0: 
+                if line_num > 0:
                     process_csv_row(row)
     except Exception, e:
         print 'ERROR: %s' % str(e)
