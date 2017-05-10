@@ -88,10 +88,13 @@ LIC_API_URL = 'https://api.paloaltonetworks.com/api/license/activate'
 LIC_FILE_SUFFIXES = {
         'AutoFocus Device License': 'canary',
         'BrightCloud URL Filtering': 'url',
+        'Decryption Port Mirror': 'decrypt',
         'GlobalProtect Gateway': 'gpgateway',
         'GlobalProtect Portal': 'gpportal',
+        'PA-VM': 'pa-vm',
         'PAN-DB URL Filtering': 'url3',
         'Threat Prevention': 'threats',
+        'Virtual Systems': 'vsys',
         'WildFire License': 'wildfire'
         }
 
