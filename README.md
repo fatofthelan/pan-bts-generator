@@ -32,13 +32,13 @@ Options:
 ##### Obtaining a license API key
 
 1. Log in to the Palo Alto Networks Support portal.
-2. Select Licensing API from the —Go To— drop-down.
+2. Select Licensing API from the Assets drop-down.
 3. Click Enable to view your key and copy it for use. Once you generate a key, the key is enabled until you regenerate or disable it.
 
 ##### Example
 
 ```
-./pan-bts-gen.py -l 0123456789 -d ./my_build_dir my_firewalls.csv
+./pan-bts-gen.py -l 0123456789 -d ./my_build_dir sample.csv
 ```
 
 ## Creating a Bootstrap USB stick
